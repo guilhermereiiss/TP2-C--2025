@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,7 +12,7 @@ namespace TP2_C__2025.TP2
         public static void Executar()
         {
             Console.Write("Digite a nota (0 a 10): ");
-            double nota = Convert.ToDouble(Console.ReadLine());
+            double nota = Convert.ToDouble(Console.ReadLine(), new CultureInfo("en-US"));
 
             if (nota >= 0 && nota <= 3)
             {

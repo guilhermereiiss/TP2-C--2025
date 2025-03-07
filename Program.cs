@@ -12,7 +12,7 @@ class Program
             Console.WriteLine("\nEscolha a questão para executar:");
             Console.WriteLine("1 - Calcular idade exata");
             Console.WriteLine("2 - Dias para o próximo aniversário");
-            Console.WriteLine("3 - Gerenciar ingressos para show");
+            Console.WriteLine("3 - Diferença entre duas datas");
             Console.WriteLine("4 - Formulário de Cadastro Simples");
             Console.WriteLine("5 - Conversor de Temperatura");
             Console.WriteLine("6 - Cálculo de IMC");

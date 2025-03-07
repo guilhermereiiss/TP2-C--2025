@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TP2-C#-2025")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5ad70c21633cf42abebfb2539b32f6fc43037d74")]
 [assembly: System.Reflection.AssemblyProductAttribute("TP2-C#-2025")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TP2-C#-2025")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

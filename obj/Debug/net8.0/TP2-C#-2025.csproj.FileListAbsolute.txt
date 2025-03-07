@@ -12,3 +12,4 @@ C:\Users\guilh\source\repos\TP2-C#-2025\obj\Debug\net8.0\refint\TP2-C#-2025.dll
 C:\Users\guilh\source\repos\TP2-C#-2025\obj\Debug\net8.0\TP2-C#-2025.pdb
 C:\Users\guilh\source\repos\TP2-C#-2025\obj\Debug\net8.0\TP2-C#-2025.genruntimeconfig.cache
 C:\Users\guilh\source\repos\TP2-C#-2025\obj\Debug\net8.0\ref\TP2-C#-2025.dll
+C:\Users\guilh\source\repos\TP2-C#-2025\obj\Debug\net8.0\TP2-C#-2025.sourcelink.json

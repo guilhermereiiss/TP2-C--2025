@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,7 +12,7 @@ namespace TP2_C__2025.TP2
         public static void Executar()
         {
             Console.Write("Digite o salário bruto: R$ ");
-            double salarioBruto = Convert.ToDouble(Console.ReadLine());
+            double salarioBruto = Convert.ToDouble(Console.ReadLine(), new CultureInfo("en-US"));
 
             
             double descontoImposto = 0;

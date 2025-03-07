@@ -4,85 +4,42 @@ namespace TP2_C__2025.TP2
 {
     internal class Questao3
     {
-        public class Ingresso
-        {
-            public string NomeDoShow { get; private set; }
-            public double Preco { get; private set; }
-            public int QuantidadeDisponivel { get; private set; }
-
-
-
-            public Ingresso(string nomeDoShow, double preco, int quantidade)
-            {
-                NomeDoShow = nomeDoShow;
-                Preco = preco;
-                QuantidadeDisponivel = quantidade;
-            }
-
-            public void AlterarPreco(double novoPreco)
-            {
-                if (novoPreco > 0)
-                {
-                    Preco = novoPreco;
-                    Console.WriteLine($"Preço atualizado para: R$ {Preco:F2}");
-                }
-                else
-                {
-                    Console.WriteLine("Erro: O preço deve ser maior que zero.");
-                }
-            }
-
-            public void AlterarQuantidade(int novaQuantidade)
-            {
-                if (novaQuantidade >= 0)
-                {
-                    QuantidadeDisponivel = novaQuantidade;
-                    Console.WriteLine($"Quantidade disponível atualizada para: {QuantidadeDisponivel}");
-                }
-                else
-                {
-                    Console.WriteLine("Erro: A quantidade não pode ser negativa.");
-                }
-            }
-
-            public void ExibirInformacoes()
-            {
-                Console.WriteLine($"Show: {NomeDoShow}\nPreço: R$ {Preco:F2}\nIngressos disponíveis: {QuantidadeDisponivel}");
-            }
-        }
-
+       
         public static void Executar()
         {
-            Console.Write("Digite o nome do show: ");
-            string nome = Console.ReadLine();
+            Console.WriteLine("Digite a primeira data (dd/MM/yyyy):");
+            DateTime data1 = DateTime.ParseExact(Console.ReadLine(), "dd/MM/yyyy", null);
 
-            Console.Write("Digite o preço inicial do ingresso: ");
-            double preco = double.Parse(Console.ReadLine());
+            Console.WriteLine("Digite a segunda data (dd/MM/yyyy):");
+            DateTime data2 = DateTime.ParseExact(Console.ReadLine(), "dd/MM/yyyy", null);
 
-            Console.Write("Digite a quantidade inicial de ingressos disponíveis: ");
-            int quantidade = int.Parse(Console.ReadLine());
-
-            Ingresso ingresso = new Ingresso(nome, preco, quantidade);
-            ingresso.ExibirInformacoes();
-
-            Console.Write("\nDeseja alterar o preço? (s/n): ");
-            if (Console.ReadLine().ToLower() == "s")
+            
+            if (data1 > data2)
             {
-                Console.Write("Digite o novo preço: ");
-                double novoPreco = double.Parse(Console.ReadLine());
-                ingresso.AlterarPreco(novoPreco);
+                var temp = data1;
+                data1 = data2;
+                data2 = temp;
             }
 
-            Console.Write("\nDeseja alterar a quantidade disponível? (s/n): ");
-            if (Console.ReadLine().ToLower() == "s")
+            TimeSpan diferenca = data2 - data1;
+
+            int anos = data2.Year - data1.Year;
+            int meses = data2.Month - data1.Month;
+            int dias = data2.Day - data1.Day;
+
+            if (dias < 0)
             {
-                Console.Write("Digite a nova quantidade: ");
-                int novaQuantidade = int.Parse(Console.ReadLine());
-                ingresso.AlterarQuantidade(novaQuantidade);
+                meses--;
+                dias += DateTime.DaysInMonth(data1.Year, data1.Month);
             }
 
-            Console.WriteLine("\nInformações finais:");
-            ingresso.ExibirInformacoes();
+            if (meses < 0)
+            {
+                anos--;
+                meses += 12;
+            }
+
+            Console.WriteLine($"Diferença: {anos} anos, {meses} meses e {dias} dias.");
         }
     }
 }
