@@ -1,7 +1,7 @@
 
 
 ---
-# ![C# Logo](https://upload.wikimedia.org/wikipedia/commons/4/4f/Csharp_Logo.png =50x50)  
+# ![C# Logo](https://upload.wikimedia.org/wikipedia/commons/4/4f/Csharp_Logo.png)
 
 # Manipulação de Dados em C#  
 
